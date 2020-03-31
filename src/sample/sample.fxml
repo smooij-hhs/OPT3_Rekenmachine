@@ -67,7 +67,7 @@
             <children>
                 <Button fx:id="deelButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deelButtonClicked" text="/" GridPane.columnIndex="2" GridPane.rowIndex="1">
                     <font>
-                        <Font name="System Bold" size="18.0" />
+                        <Font name="System Bold" size="36.0" />
                     </font>
                 </Button>
                 <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#plusButtonClicked" text="+" GridPane.rowIndex="1">
