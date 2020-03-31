@@ -18,8 +18,13 @@ public class Controller {
         txtResultaat.setText("" + resultaat);
     }
 
-    @FXML
     private void plusButtonClicked (ActionEvent event) {
+        int getal1 = Integer.parseInt(txtGetal1.getText());
+        int getal2 = Integer.parseInt(txtGetal2.getText());
+        int resultaat = getal1 + getal2;
+
+        String newResult = Integer.toString(resultaat);
+        txtResultaat.setText(newResult);
 
     }
 
