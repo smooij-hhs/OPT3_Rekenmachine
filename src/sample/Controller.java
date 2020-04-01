@@ -10,56 +10,43 @@ public class Controller {
     @FXML private TextField txtGetal2;
     @FXML private TextField txtResultaat;
 
-    private double rekenen (String bereken){
-        double resultaat = 0;
-        double getal1 = Double.parseDouble(txtGetal1.getText());
-        double getal2 = Double.parseDouble(txtGetal2.getText());
-        if (bereken.equals("+")){
-            resultaat = getal1 + getal2;
-        }
-        else if (bereken.equals("-")){
-            resultaat = getal1 - getal2;
-        }
-        else if (bereken.equals("/")){
-            resultaat = getal1 / getal2;
-        }
-        else if (bereken.equals("*")){
-            resultaat = getal1 * getal2;
-        }
-        else if (bereken.equals("%")){
-            resultaat = getal1 % getal2;
-        }
+    private double getGetal1() {
+        return Double.parseDouble(txtGetal1.getText());
+    }
 
-        return resultaat;
+    private double getGetal2() {
+        return Double.parseDouble(txtGetal2.getText());
+    }
+
+    private void ButtonClicked(IBerekening berekening) {
+        double getal1 = getGetal1();
+        double getal2 = getGetal2();
+        double resultaat = berekening.bereken(getal1, getal2);
+        txtResultaat.setText(String.valueOf(resultaat));
     }
 
     @FXML
     private void deelButtonClicked (ActionEvent event) {
-        String newResult = Double.toString(rekenen("/"));
-        txtResultaat.setText(newResult);
+        ButtonClicked (new deelKnop());
     }
 
     @FXML
     private void plusButtonClicked (ActionEvent event) {
-        String newResult = Double.toString(rekenen("+"));
-        txtResultaat.setText(newResult);
+        ButtonClicked (new plusKnop());
     }
 
     @FXML
     private void maalButtonClicked (ActionEvent event) {
-        String newResult = Double.toString(rekenen("*"));
-        txtResultaat.setText(newResult);
+        ButtonClicked (new keerKnop());
     }
 
     @FXML
     private void minButtonClicked (ActionEvent event) {
-        String newResult = Double.toString(rekenen("-"));
-        txtResultaat.setText(newResult);
+        ButtonClicked (new minKnop());
     }
 
     @FXML
     private void moduloButtonClicked (ActionEvent event) {
-        String newResult = Double.toString(rekenen("%"));
-        txtResultaat.setText(newResult);
+        ButtonClicked (new moduloKnop());
     }
 }
