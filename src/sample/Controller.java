@@ -10,27 +10,25 @@ public class Controller {
     @FXML private TextField txtGetal2;
     @FXML private TextField txtResultaat;
 
-    @FXML
-    private void deelButtonClicked (ActionEvent event) {
+    private void ButtonClicked(Berekening berekening) {
         int getal1 = Integer.parseInt(txtGetal1.getText());
         int getal2 = Integer.parseInt(txtGetal2.getText());
-        int resultaat = getal1 / getal2;
-        txtResultaat.setText("" + resultaat);
+        int resultaat = berekening.bereken(getal1, getal2);
+        txtResultaat.setText(String.valueOf(resultaat));
+    }
+
+    @FXML
+    private void deelButtonClicked (ActionEvent event) {
+        ButtonClicked(new DeelBerekening());
     }
 
     @FXML
     private void plusButtonClicked (ActionEvent event) {
-        int getal1 = Integer.parseInt(txtGetal1.getText());
-        int getal2 = Integer.parseInt(txtGetal2.getText());
-        int resultaat = getal1 + getal2;
-
-        String newResult = Integer.toString(resultaat);
-        txtResultaat.setText(newResult);
-
+        ButtonClicked(new PlusBerekening());
     }
 
     @FXML
     private void maalButtonClicked (ActionEvent event) {
-
+        ButtonClicked(new MaalBerekening());
     }
 }
