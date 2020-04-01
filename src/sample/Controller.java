@@ -10,52 +10,56 @@ public class Controller {
     @FXML private TextField txtGetal2;
     @FXML private TextField txtResultaat;
 
-    @FXML
-    private void deelButtonClicked (ActionEvent event) {
+    private double rekenen (String bereken){
+        double resultaat = 0;
         double getal1 = Double.parseDouble(txtGetal1.getText());
         double getal2 = Double.parseDouble(txtGetal2.getText());
-        double resultaat = getal1 / getal2;
-        txtResultaat.setText("" + resultaat);
+        if (bereken.equals("+")){
+            resultaat = getal1 + getal2;
+        }
+        else if (bereken.equals("-")){
+            resultaat = getal1 - getal2;
+        }
+        else if (bereken.equals("/")){
+            resultaat = getal1 / getal2;
+        }
+        else if (bereken.equals("*")){
+            resultaat = getal1 * getal2;
+        }
+        else if (bereken.equals("%")){
+            resultaat = getal1 % getal2;
+        }
+
+        return resultaat;
+    }
+
+    @FXML
+    private void deelButtonClicked (ActionEvent event) {
+        String newResult = Double.toString(rekenen("/"));
+        txtResultaat.setText(newResult);
     }
 
     @FXML
     private void plusButtonClicked (ActionEvent event) {
-        double getal1 = Double.parseDouble(txtGetal1.getText());
-        double getal2 = Double.parseDouble(txtGetal2.getText());
-        double resultaat = getal1 + getal2;
-
-        String newResult = Double.toString(resultaat);
+        String newResult = Double.toString(rekenen("+"));
         txtResultaat.setText(newResult);
-
     }
 
     @FXML
     private void maalButtonClicked (ActionEvent event) {
-        double getal1 = Double.parseDouble(txtGetal1.getText());
-        double getal2 = Double.parseDouble(txtGetal2.getText());
-        double resultaat = getal1 * getal2;
-
-        String newResult = Double.toString(resultaat);
+        String newResult = Double.toString(rekenen("*"));
         txtResultaat.setText(newResult);
     }
 
     @FXML
     private void minButtonClicked (ActionEvent event) {
-        double getal1 = Double.parseDouble(txtGetal1.getText());
-        double getal2 = Double.parseDouble(txtGetal2.getText());
-        double resultaat = getal1 - getal2;
-
-        String newResult = Double.toString(resultaat);
+        String newResult = Double.toString(rekenen("-"));
         txtResultaat.setText(newResult);
     }
 
     @FXML
     private void moduloButtonClicked (ActionEvent event) {
-        double getal1 = Double.parseDouble(txtGetal1.getText());
-        double getal2 = Double.parseDouble(txtGetal2.getText());
-        double resultaat = getal1 % getal2;
-
-        String newResult = Double.toString(resultaat);
+        String newResult = Double.toString(rekenen("%"));
         txtResultaat.setText(newResult);
     }
 }
