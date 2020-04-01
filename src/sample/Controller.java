@@ -12,25 +12,30 @@ public class Controller {
 
     @FXML
     private void deelButtonClicked (ActionEvent event) {
-        int getal1 = Integer.parseInt(txtGetal1.getText());
-        int getal2 = Integer.parseInt(txtGetal2.getText());
-        int resultaat = getal1 / getal2;
+        double getal1 = Double.parseDouble(txtGetal1.getText());
+        double getal2 = Double.parseDouble(txtGetal2.getText());
+        double resultaat = getal1 / getal2;
         txtResultaat.setText("" + resultaat);
     }
 
     @FXML
     private void plusButtonClicked (ActionEvent event) {
-        int getal1 = Integer.parseInt(txtGetal1.getText());
-        int getal2 = Integer.parseInt(txtGetal2.getText());
-        int resultaat = getal1 + getal2;
+        double getal1 = Double.parseDouble(txtGetal1.getText());
+        double getal2 = Double.parseDouble(txtGetal2.getText());
+        double resultaat = getal1 + getal2;
 
-        String newResult = Integer.toString(resultaat);
+        String newResult = Double.toString(resultaat);
         txtResultaat.setText(newResult);
 
     }
 
     @FXML
     private void maalButtonClicked (ActionEvent event) {
+        double getal1 = Double.parseDouble(txtGetal1.getText());
+        double getal2 = Double.parseDouble(txtGetal2.getText());
+        double resultaat = getal1 * getal2;
 
+        String newResult = Double.toString(resultaat);
+        txtResultaat.setText(newResult);
     }
 }
