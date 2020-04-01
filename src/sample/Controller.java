@@ -33,4 +33,10 @@ public class Controller {
     private void maalButtonClicked (ActionEvent event) {
 
     }
+
+    @FXML
+    private void rekenKnop(ActionEvent event)
+    {
+
+    }
 }
