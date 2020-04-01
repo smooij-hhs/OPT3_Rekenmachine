@@ -48,4 +48,14 @@ public class Controller {
         String newResult = Double.toString(resultaat);
         txtResultaat.setText(newResult);
     }
+
+    @FXML
+    private void moduloButtonClicked (ActionEvent event) {
+        double getal1 = Double.parseDouble(txtGetal1.getText());
+        double getal2 = Double.parseDouble(txtGetal2.getText());
+        double resultaat = getal1 % getal2;
+
+        String newResult = Double.toString(resultaat);
+        txtResultaat.setText(newResult);
+    }
 }

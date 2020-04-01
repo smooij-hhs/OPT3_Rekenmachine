@@ -60,6 +60,7 @@
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints />
@@ -68,22 +69,27 @@
             <children>
                 <Button fx:id="deelButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deelButtonClicked" text="/" GridPane.columnIndex="2" GridPane.rowIndex="1">
                     <font>
-                        <Font name="System Bold" size="36.0" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
                 </Button>
                 <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#plusButtonClicked" text="+" GridPane.rowIndex="1">
                     <font>
-                        <Font name="System Bold" size="36.0" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
                 </Button>
                 <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#maalButtonClicked" text="*" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <font>
-                        <Font name="System Bold" size="36.0" />
+                        <Font name="System Bold" size="18.0" />
                     </font>
                 </Button>
                 <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#minButtonClicked" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
                     <font>
-                        <Font name="System Bold" size="36.0" />
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#moduloButtonClicked" text="M" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
                     </font>
                 </Button>
             </children>
